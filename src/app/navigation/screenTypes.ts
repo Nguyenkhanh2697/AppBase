@@ -16,6 +16,7 @@ export enum APP_SCREEN {
   DETAIL_ITEM = 'DETAIL_ITEM',
   DETAIL_SEARCH = 'DETAIL_SEARCH',
   DETAIL_ITEM_SEARCH = 'DETAIL_ITEM_SEARCH',
+  HOOK_FORM = 'HOOK_FORM',
 }
 
 export type UnAuthorizeParamsList = {

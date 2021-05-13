@@ -1,5 +1,5 @@
 import React, {memo, useCallback, useEffect, useState} from 'react';
-import {Alert, StyleSheet} from 'react-native';
+import {Alert, StyleSheet, TouchableOpacity} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
 import isEqual from 'react-fast-compare';
 import {AuthorizeParamsList, APP_SCREEN} from '@navigation/screenTypes';
@@ -9,6 +9,7 @@ import {goBack, navigate} from '@navigation/navigationService';
 import {BaseListLogic} from './index.prop';
 import {actions} from './../redux/reducer';
 import {useSelector, AppDispatch, dispatch} from '@common';
+import {useNavigation} from '@react-navigation/native';
 
 type DetailHomeProps = StackScreenProps<
   AuthorizeParamsList,
@@ -26,6 +27,16 @@ const styles = StyleSheet.create({
   },
   h20: {
     height: scale(20),
+  },
+  txtHookForm: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  btnHookForm: {
+    borderWidth: 1,
+    width: '50%',
+    alignSelf: 'center',
   },
 });
 
@@ -78,8 +89,6 @@ export class SampleListLogic extends BaseListLogic<Item> {
           },
         );
 
-        console.log('s', returnList);
-
         return resolve(returnList);
       }, 1000);
     });
@@ -87,6 +96,7 @@ export class SampleListLogic extends BaseListLogic<Item> {
 }
 
 const DetailHomeComponent = ({}: DetailHomeProps) => {
+  const navigation = useNavigation();
   const {listSearch} = useSelector(x => x.getListSearch);
   const [page, setPage] = useState(1);
   const [dataTest, setDataTest] = useState<Item[]>([]);
@@ -160,6 +170,11 @@ const DetailHomeComponent = ({}: DetailHomeProps) => {
   return (
     <Block block>
       <SearchBar placeHolderTx={'Tìm kiếm'} onChangeText={onChangeText} />
+      <TouchableOpacity
+        style={styles.btnHookForm}
+        onPress={() => navigation.navigate('HOOK_FORM')}>
+        <Text style={styles.txtHookForm}>React Hook Form</Text>
+      </TouchableOpacity>
       <ListView
         canRefresh
         canLoadMore={canLoadMore}

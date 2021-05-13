@@ -7,6 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import isEqual from 'react-fast-compare';
 import {useRoute} from '@react-navigation/native';
+import HookFormScreen from './../../HookFormScreen/index';
 
 const MainStack = createStackNavigator();
 const MainTestStack = createStackNavigator();
@@ -95,6 +96,11 @@ const MainTest = () => {
         // options={{headerShown: false}}
         name={APP_SCREEN.HOME1}
         component={Home}
+      />
+      <MainStack.Screen
+        options={{headerShown: false}}
+        name={APP_SCREEN.HOOK_FORM}
+        component={HookFormScreen}
       />
       <MainStack.Screen
         // options={{headerShown: false}}
