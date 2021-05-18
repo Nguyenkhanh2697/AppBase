@@ -136,10 +136,12 @@
     <orderEntry type="module" module-name="MyApp.react-native-community_netinfo" />
     <orderEntry type="module" module-name="MyApp.react-native-fast-image" />
     <orderEntry type="module" module-name="MyApp.react-native-gesture-handler" />
+    <orderEntry type="module" module-name="MyApp.react-native-linear-gradient" />
     <orderEntry type="module" module-name="MyApp.react-native-safe-area-context" />
     <orderEntry type="module" module-name="MyApp.react-native-screens" />
     <orderEntry type="module" module-name="MyApp.react-native-sensitive-info" />
     <orderEntry type="module" module-name="MyApp.react-native-splash-screen" />
     <orderEntry type="module" module-name="MyApp.react-native-svg" />
+    <orderEntry type="module" module-name="MyApp.react-native-vector-icons" />
   </component>
 </module>

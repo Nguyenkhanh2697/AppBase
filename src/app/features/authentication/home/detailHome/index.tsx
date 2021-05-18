@@ -117,7 +117,7 @@ const DetailHomeComponent = ({}: DetailHomeProps) => {
   };
 
   const onChangeText = (txt: string) => {
-    const newState = listSearch.filter((searchData: any, index: number) => {
+    const newState = dataTest.filter((searchData: any, index: number) => {
       return searchData.title.toLowerCase().includes(txt.toLowerCase());
     });
     setDataTest(newState);

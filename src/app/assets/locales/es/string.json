@@ -41,14 +41,14 @@
     "loading": "Loading",
     "select": "Chọn"
   },
-  
+
   "main": {
     "homeTab": {
       "tvHome": "Home page",
       "tvButtonLogout": "Logout",
       "nextScreen": "Next page",
       "goBack": "Go Back",
-      "changeLanguage":"Change Language"
+      "changeLanguage": "Change Language"
     },
     "chatTab": {
       "tvChat": "Chat",
@@ -58,5 +58,19 @@
       "tvProfile": "Profile",
       "tvTabLabel": "Profile"
     }
+  },
+  "input": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "back": "Back",
+    "save": "Save",
+    "errorEmailRequired": "Email is required",
+    "errorEmail": "Email is invalid",
+    "errorPhoneRequired": "Phone is required",
+    "errorPhone": "Phone is invalid",
+    "alertSuccess": "Success",
+    "errorNameRequired": "Name is required",
+    "changeLanguage": "Change language"
   }
 }

@@ -54,8 +54,7 @@
       "tvButtonLogout": "Đăng Xuất",
       "nextScreen": "Trang Tiếp",
       "goBack": "Quay lại",
-      "changeLanguage":"Thay Đổi Ngôn Ngữ"
-
+      "changeLanguage": "Thay Đổi Ngôn Ngữ"
     },
     "likesTab": {
       "tvLike": "Yêu thích"
@@ -66,5 +65,19 @@
     "profileTab": {
       "tvProfile": "Cá nhân"
     }
+  },
+  "input": {
+    "name": "Tên",
+    "email": "Thư điện tử",
+    "phone": "Số điện thoại",
+    "back": "Quay lại",
+    "save": "Lưu",
+    "errorEmailRequired": "Phải nhập email",
+    "errorEmail": "Không đúng định dạng mail",
+    "errorPhoneRequired": "Phải nhập số điện thoại",
+    "errorPhone": "Không đúng định dạng số điện thoại",
+    "errorNameRequired": "Phải nhập tên",
+    "alertSuccess": "Thành công",
+    "changeLanguage": "Thay đổi ngôn ngữ"
   }
 }

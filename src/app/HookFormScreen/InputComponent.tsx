@@ -1,16 +1,22 @@
 import {TextField} from '@components';
 import {HookFormRules} from '@config/type';
-import {FormLoginType} from '@model/login';
+// import {FormLoginType} from '@model/login';
 import React, {memo} from 'react';
 import isEqual from 'react-fast-compare';
 import {useController, useFormContext} from 'react-hook-form';
-import {Text, TextInputProps} from 'react-native';
+import {Text, TextInputProps, StyleSheet} from 'react-native';
+
+export type FormValidateType = {
+  name: string;
+  email: string;
+  phoneNumber: string;
+};
 
 interface InputProps extends TextInputProps {
-  name: keyof FormLoginType;
+  name: keyof FormValidateType;
   label: string;
   onSubmit?: () => void;
-  nameTrigger?: keyof FormLoginType;
+  nameTrigger?: keyof FormValidateType;
   rules?: HookFormRules;
 }
 
@@ -29,7 +35,7 @@ const InputComponent = ({
     control,
     trigger,
     getValues,
-  } = useFormContext<FormLoginType>();
+  } = useFormContext<FormValidateType>();
   const {field} = useController({
     name,
     control,
@@ -52,9 +58,16 @@ const InputComponent = ({
         typeInput={'flat'}
         {...rest}
       />
-      <Text>{errors[name]?.message}</Text>
+      <Text style={styles.errorText}>{errors[name]?.message}</Text>
     </>
   );
 };
 
-export const Input = memo(InputComponent, isEqual);
+export const InputForm = memo(InputComponent, isEqual);
+
+const styles = StyleSheet.create({
+  errorText: {
+    color: 'red',
+    marginTop: 5,
+  },
+});

@@ -19,7 +19,7 @@ export const RootNavigation = memo(({token}: {token?: string}) => {
         <RootStack.Screen
           options={{animationTypeForReplace: 'pop', gestureEnabled: false}}
           name={APP_SCREEN.UN_AUTHORIZE}
-          component={MainScreen}
+          component={UnAuthentication}
         />
       ) : (
         <RootStack.Screen

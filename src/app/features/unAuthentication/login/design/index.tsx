@@ -8,7 +8,6 @@ import {onSetToken} from '@store/app_redux/reducer';
 const LoginComponent = () => {
   const dispatch = useDispatch();
   const onSubmit = useCallback((data: FormLoginType) => {
-    // console.log('dddd');
     dispatch(onSetToken('token'));
     // alert(JSON.stringify(data));
   }, []);
